@@ -216,3 +216,28 @@ Los alias permiten abreviar comandos frecuentes; son opcionales y conviene apren
 | `git status` | Revisa el estado antes de publicar. |
 
 
+# 🛠️ Herramientas de Git
+
+| Sección | Explicación | Ejemplo / Comando |
+|---------|-------------|-------------------|
+| **1. Inspeccionar commits y cambios** | Git permite consultar qué cambió, quién hizo una confirmación y cuándo. Los comandos de inspección son útiles para entender regresiones y verificar el alcance de una modificación. | `git show` |
+| **2. Seleccionar y organizar cambios** | Es posible preparar solo partes de un archivo con herramientas interactivas. Esto ayuda a mantener commits pequeños y enfocados, en lugar de mezclar cambios no relacionados. | — |
+| **3. Guardar trabajo temporalmente** | `git stash` permite apartar temporalmente cambios locales para cambiar de contexto. Antes de usarlo, consulta el estado del repositorio y recuerda que el contenido guardado debe recuperarse cuando sea necesario. | `git stash` <br> `git stash pop` |
+| **4. Buscar y diagnosticar** | Git incluye herramientas para buscar texto en archivos seguidos, revisar cuándo se introdujo una línea y localizar la confirmación que pudo causar un problema. | `git grep "texto"` <br> `git blame archivo.txt` <br> `git bisect start` |
+| **5. Recuperación y precaución** | Algunos comandos avanzados pueden cambiar referencias o descartar cambios. Antes de usar `reset`, limpieza de archivos o reescritura de historial, asegúrate de comprender el efecto y conserva una copia de cualquier trabajo importante. | — |
+
+---
+
+## 📌 Comandos de referencia
+
+| Comando | ¿Para qué sirve? |
+|---------|------------------|
+| `git show` | Muestra detalles de una confirmación. |
+| `git stash` | Guarda temporalmente cambios locales. |
+| `git stash pop` | Recupera cambios guardados y los retira de la lista si se aplican correctamente. |
+| `git grep "texto"` | Busca texto en los archivos seguidos por Git. |
+| `git blame archivo.txt` | Muestra la última confirmación asociada a cada línea. |
+| `git bisect start` | Inicia una búsqueda binaria para localizar una regresión; requiere seguir el procedimiento de bisect. |
+
+
+
