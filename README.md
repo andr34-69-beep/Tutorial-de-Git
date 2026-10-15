@@ -264,3 +264,25 @@ Los alias permiten abreviar comandos frecuentes; son opcionales y conviene apren
 
 
 
+# 🔄 Git y otros sistemas
+
+| Sección | Explicación | Ejemplo / Comando |
+|---------|-------------|-------------------|
+| **1. Git como cliente** | Git puede participar en procesos de migración e interoperabilidad con otros sistemas. El método adecuado depende del sistema de origen, de la necesidad de conservar el historial y de las herramientas disponibles. | — |
+| **2. Migrar un proyecto** | Antes de migrar, define qué se debe conservar: archivos actuales, ramas, etiquetas, autores, fechas e historial. Realiza una prueba en una copia y verifica que el resultado sea correcto antes de cambiar el flujo de trabajo oficial. | — |
+| **3. Verificación posterior** | Compara la estructura de archivos, revisa las ramas y etiquetas, inspecciona las confirmaciones importadas y prueba el proceso habitual de trabajo. Mantén una copia de seguridad del repositorio original durante la transición. | `git log --oneline --all --decorate` <br> `git branch -a` <br> `git tag` |
+| **4. Elegir una estrategia** | No existe un procedimiento único para todos los sistemas. Consulta la documentación oficial de la herramienta de origen y de Git, y selecciona un método que preserve los datos requeridos por el proyecto. | — |
+
+---
+
+## 📌 Comandos de referencia
+
+| Comando | ¿Para qué sirve? |
+|---------|------------------|
+| `git log --oneline --all --decorate` | Inspecciona el historial y las referencias disponibles. |
+| `git branch -a` | Lista las ramas locales y las referencias remotas conocidas. |
+| `git tag` | Lista las etiquetas existentes. |
+| `git fsck` | Verifica la conectividad y validez de objetos del repositorio; úsalo como comprobación técnica, no como sustituto de una copia de seguridad. |
+
+
+
