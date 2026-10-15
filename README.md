@@ -146,3 +146,27 @@ Los alias permiten abreviar comandos frecuentes; son opcionales y conviene apren
 | `git fetch` | Actualiza referencias desde un remoto sin integrar automáticamente. |
 | `git rebase main` | Reaplica commits de la rama actual sobre main; úsalo con cuidado. |
 
+
+
+# 🌐 Uso de servidores Git y remotos
+
+| Sección | Explicación | Ejemplo / Comando |
+|---------|-------------|-------------------|
+| **1. ¿Por qué usar un servidor Git?** | Un servidor o servicio de alojamiento permite compartir repositorios, colaborar con otras personas y mantener una copia remota del historial. GitHub es una de las plataformas más usadas. | — |
+| **2. Protocolos de acceso** | Los repositorios remotos suelen utilizar **HTTPS** o **SSH**. <br> - HTTPS: autenticación administrada por la plataforma. <br> - SSH: claves criptográficas configuradas en la cuenta. | — |
+| **3. HTTPS y SSH** | Ejemplo de URL HTTPS: <br> `https://github.com/usuario/repositorio.git` <br><br> Ejemplo de URL SSH: <br> `git@github.com:usuario/repositorio.git` <br><br> ⚠️ No publiques contraseñas, tokens ni claves privadas en el repositorio. | — |
+| **4. Configurar un remoto** | Si ya tienes un repositorio local, puedes asociarlo a un remoto vacío. Comprueba la URL y la rama actual antes de publicar para evitar errores. | `git remote add origin URL` <br> `git push -u origin main` |
+| **5. Buenas prácticas** | - Verifica los permisos antes de publicar. <br> - Usa autenticación segura. <br> - Evita incluir secretos en commits. <br> - Revisa qué archivos se van a subir. <br> - Si se filtra una credencial, revócala o rótala de inmediato. | — |
+
+---
+
+## 📌 Comandos de referencia
+
+| Comando | ¿Para qué sirve? |
+|---------|------------------|
+| `git remote -v` | Consulta los remotos configurados. |
+| `git remote add origin URL` | Añade un remoto llamado origin. |
+| `git push -u origin main` | Publica main y establece su seguimiento, si la rama se llama main. |
+| `ssh-keygen -t ed25519 -C "tu-correo@ejemplo.com"` | Genera una clave SSH en sistemas compatibles; protege la clave privada. |
+
+
