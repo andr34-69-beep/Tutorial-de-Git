@@ -68,3 +68,53 @@ Git incluye ayuda para comandos concretos. Puedes consultar `git help config` o 
 | `git config --global user.email "tu-correo@ejemplo.com"` | Define el correo para los commits. |
 | `git config --list` | Muestra la configuración efectiva. |
 
+
+
+
+
+# FUNDAMENTOS DE GIT
+
+## 1. Crear u obtener un repositorio
+Un repositorio puede iniciarse dentro de una carpeta existente o copiarse desde un servidor mediante clonación. Usa `git init` para iniciar un proyecto local y `git clone` para obtener una copia de un repositorio existente.
+
+## 2. El ciclo de trabajo
+El flujo más habitual consiste en editar archivos, revisar su estado, seleccionar los cambios con `git add` y guardarlos en el historial con `git commit`.  
+Un archivo puede estar modificado, preparado o confirmado. Revisar el estado antes de confirmar evita incluir cambios por accidente.
+
+## 3. Inspeccionar diferencias e historial
+- `git diff` ayuda a revisar cambios que todavía no están preparados.  
+- `git diff --staged` muestra los cambios preparados.  
+- `git log` permite consultar las confirmaciones anteriores.
+
+## 4. Corregir errores con cuidado
+Git ofrece mecanismos para retirar archivos del área de preparación, modificar la última confirmación o recuperar versiones.  
+Antes de ejecutar comandos que descarten cambios, revisa el estado y asegúrate de que no necesitas el contenido.
+
+## 5. Trabajar con repositorios remotos
+Un remoto es una referencia a otro repositorio, por ejemplo uno alojado en GitHub.  
+- `git remote -v` muestra las direcciones configuradas.  
+- `git push` publica commits.  
+- `git pull` obtiene e integra cambios remotos.
+
+## 6. Etiquetas y alias
+Las etiquetas permiten señalar puntos importantes del historial, como versiones publicadas.  
+Los alias permiten abreviar comandos frecuentes; son opcionales y conviene aprender primero los comandos originales.
+
+---
+
+## 📌 Comandos de referencia
+
+| Comando | ¿Para qué sirve? |
+|---------|------------------|
+| `git init` | Inicia un repositorio en la carpeta actual. |
+| `git clone URL` | Copia un repositorio remoto. |
+| `git status` | Muestra los cambios y su estado. |
+| `git add archivo.txt` | Prepara un archivo concreto. |
+| `git commit -m "Describe el cambio"` | Guarda una confirmación. |
+| `git diff` | Muestra cambios no preparados. |
+| `git diff --staged` | Muestra cambios preparados. |
+| `git log --oneline` | Resume el historial. |
+| `git remote -v` | Muestra los remotos configurados. |
+| `git push` | Envía commits al remoto configurado. |
+| `git pull` | Obtiene e integra cambios remotos. |
+
