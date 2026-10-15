@@ -118,3 +118,31 @@ Los alias permiten abreviar comandos frecuentes; son opcionales y conviene apren
 | `git push` | Envía commits al remoto configurado. |
 | `git pull` | Obtiene e integra cambios remotos. |
 
+
+
+# Ramas en Git
+
+| Sección | Explicación | Ejemplo / Comando |
+|---------|-------------|-------------------|
+| **1. ¿Qué es una rama?** | Una rama es una referencia móvil a una confirmación. Permite desarrollar una función o experimentar sin mezclar inmediatamente esos cambios con la rama principal. Son ligeras y no duplican todos los archivos. | — |
+| **2. Crear y cambiar de rama** | Antes de cambiar de rama, revisa si tienes modificaciones sin confirmar. Git puede impedir el cambio para proteger tus cambios. Se recomienda `git switch`. | `git switch -c nueva-funcion` <br> `git switch main` |
+| **3. Fusionar ramas** | Una fusión integra el trabajo de una rama en otra. Primero se cambia a la rama que recibirá los cambios y luego se ejecuta `git merge`. | `git switch main` <br> `git merge nueva-funcion` |
+| **Ejemplo de conflicto** | Si dos ramas modifican la misma línea, Git marca el archivo con secciones: <br> ```<<<<<<< HEAD``` <br> ```Versión en main``` <br> ```=======``` <br> ```Versión en nueva-funcion``` <br> ```>>>>>>> nueva-funcion``` | Resolución: editar el archivo, decidir el contenido final, luego: <br> `git add index.html` <br> `git commit -m "Resolver conflicto"` |
+| **4. Administrar ramas** | `git branch` lista las ramas locales. `git branch -d` elimina una rama ya integrada. No elimines ramas con trabajo importante sin revisar. | `git branch` <br> `git branch -d nueva-funcion` |
+| **5. Ramas remotas y reorganización** | Las ramas remotas representan el estado conocido en otro repositorio. `fetch`, `pull` y `push` actualizan y comparten cambios. El **rebase** reaplica commits sobre otra base para un historial lineal. | `git fetch origin` <br> `git pull origin main` <br> `git push origin nueva-funcion` <br> `git rebase main` |
+| **⚠️ Nota sobre rebase** | Evita reescribir historial que otras personas ya estén usando sin coordinarlo. | — |
+
+---
+
+## 📌 Comandos de referencia
+
+| Comando | ¿Para qué sirve? |
+|---------|------------------|
+| `git branch` | Lista las ramas locales. |
+| `git switch -c nueva-funcion` | Crea una rama y cambia a ella. |
+| `git switch main` | Cambia a la rama main, si existe. |
+| `git merge nueva-funcion` | Integra la rama indicada en la rama actual. |
+| `git branch -d nueva-funcion` | Elimina una rama local integrada. |
+| `git fetch` | Actualiza referencias desde un remoto sin integrar automáticamente. |
+| `git rebase main` | Reaplica commits de la rama actual sobre main; úsalo con cuidado. |
+
