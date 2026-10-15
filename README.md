@@ -170,3 +170,27 @@ Los alias permiten abreviar comandos frecuentes; son opcionales y conviene apren
 | `ssh-keygen -t ed25519 -C "tu-correo@ejemplo.com"` | Genera una clave SSH en sistemas compatibles; protege la clave privada. |
 
 
+# 🤝 Trabajo distribuido y colaboración en Git
+
+| Sección | Explicación | Ejemplo / Comando |
+|---------|-------------|-------------------|
+| **1. Trabajo distribuido** | En Git, cada colaborador dispone de una copia completa del historial. Los equipos acuerdan cómo compartir cambios, revisar propuestas y decidir qué commits se integran. | — |
+| **2. Modelos de colaboración** | - **Flujo centralizado**: varias personas publican en un repositorio compartido si tienen permisos. <br> - **Flujo basado en integración**: los colaboradores proponen cambios y una persona responsable los revisa antes de integrarlos. <br> - En proyectos públicos es habitual crear un **fork**, trabajar en una rama y abrir un *pull request*. | — |
+| **3. Contribuir a un proyecto** | Antes de contribuir: <br> - Lee las instrucciones del proyecto. <br> - Identifica la rama de destino. <br> - Revisa las convenciones. <br> - Mantén los cambios enfocados. <br> - Describe claramente los commits. <br> - Ejecuta las pruebas pertinentes. | `git switch -c mejora-documentacion` <br> `git add README.md` <br> `git commit -m "Mejora la documentación"` |
+| **4. Revisar y mantener cambios** | Quien mantiene el proyecto revisa la propuesta, solicita ajustes cuando sea necesario y decide cómo integrarla. Una revisión útil se centra en: <br> - Corrección <br> - Claridad <br> - Pruebas <br> - Compatibilidad con el proyecto | — |
+| **5. Comunicación y trazabilidad** | Describe qué problema resuelve el cambio, cómo se verificó y si existen limitaciones. Una buena descripción facilita revisar el trabajo y entender decisiones futuras. | — |
+
+---
+
+## 📌 Comandos de referencia
+
+| Comando | ¿Para qué sirve? |
+|---------|------------------|
+| `git clone URL` | Obtiene una copia del proyecto. |
+| `git switch -c mejora-documentacion` | Crea una rama de trabajo. |
+| `git add README.md` | Prepara el archivo modificado. |
+| `git commit -m "Mejora la documentación"` | Registra el cambio. |
+| `git push -u origin mejora-documentacion` | Publica la rama para revisión. |
+
+
+
