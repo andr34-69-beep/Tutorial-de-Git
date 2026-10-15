@@ -286,3 +286,24 @@ Los alias permiten abreviar comandos frecuentes; son opcionales y conviene apren
 
 
 
+# 🧩 Los entresijos internos de Git
+
+| Sección | Explicación | Ejemplo / Comando |
+|---------|-------------|-------------------|
+| **1. Comandos de alto y bajo nivel** | Los comandos habituales, llamados de alto nivel (*porcelain*), están diseñados para el trabajo diario. Los comandos de bajo nivel (*plumbing*) permiten examinar y manipular componentes internos de Git. | — |
+| **2. Objetos Git** | Git almacena objetos que representan contenido y estructura: <br> - **Blobs**: contenido de archivos. <br> - **Trees**: estructura de directorios. <br> - **Commits**: instantáneas e información de historial. <br> - **Tags**: referencias anotadas. | `git cat-file -t HASH` <br> `git cat-file -p HASH` |
+| **3. Referencias** | Las ramas y etiquetas son referencias que ayudan a localizar commits. **HEAD** indica normalmente la rama o confirmación sobre la que se está trabajando. Comprender las referencias ayuda a entender operaciones como cambiar de rama, fusionar o recuperar historial. | `git show-ref` <br> `git reflog` |
+| **4. Almacenamiento y transferencia** | Git optimiza el almacenamiento mediante objetos comprimidos y, cuando corresponde, archivos de paquete. Para compartir datos, Git negocia qué objetos necesita enviar o recibir según el protocolo y las referencias involucradas. | — |
+| **5. Mantenimiento y recuperación** | Git incluye herramientas para comprobar la integridad del repositorio y recuperar referencias o commits que ya no estén visibles desde una rama. Estas tareas son avanzadas; antes de intervenir en la base de datos interna, haz una copia y consulta la documentación. | `git fsck --full` |
+
+---
+
+## 📌 Comandos de referencia
+
+| Comando | ¿Para qué sirve? |
+|---------|------------------|
+| `git cat-file -t HASH` | Muestra el tipo de un objeto, si existe en el repositorio. |
+| `git cat-file -p HASH` | Muestra el contenido legible de un objeto. |
+| `git show-ref` | Muestra referencias locales. |
+| `git reflog` | Consulta el registro local de movimientos de referencias. |
+| `git fsck --full` | Comprueba la integridad de los objetos del repositorio. |
