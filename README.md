@@ -194,3 +194,25 @@ Los alias permiten abreviar comandos frecuentes; son opcionales y conviene apren
 
 
 
+# 📂 Git vs GitHub y colaboración en repositorios
+
+| Sección | Explicación | Ejemplo / Comando |
+|---------|-------------|-------------------|
+| **1. Git y GitHub no son lo mismo** | **Git** es el sistema de control de versiones que funciona localmente y en distintos servicios. <br> **GitHub** es una plataforma que aloja repositorios Git y añade herramientas de colaboración, revisión, seguimiento y automatización. | — |
+| **2. Crear y configurar un repositorio** | Al crear un repositorio se elige nombre, visibilidad y opciones iniciales. <br> - **Público**: visible para cualquiera. <br> - **Privado**: acceso limitado a personas autorizadas. <br> Si el proyecto ya existe localmente, sigue las instrucciones de GitHub para conectarlo sin sobrescribir archivos o historiales. | `git remote add origin URL` |
+| **3. Archivos importantes** | - `README.md`: presenta propósito, instrucciones y estructura del proyecto. <br> - `.gitignore`: indica qué archivos no debe seguir Git. <br> - **Licencia**: explica permisos de reutilización cuando corresponde. | — |
+| **4. Colaboración** | GitHub permite: <br> - Revisar cambios mediante *pull requests*. <br> - Discutir propuestas en comentarios. <br> - Registrar tareas mediante *issues*. <br> Estas herramientas complementan el historial técnico de Git con contexto y comunicación. | `git push -u origin main` <br> `git pull origin main` |
+| **5. Seguridad y mantenimiento** | - Usa permisos adecuados. <br> - Activa medidas de seguridad disponibles. <br> - Revisa los archivos antes de publicarlos. <br> - No incluyas contraseñas, tokens ni datos privados. | `git status` |
+
+---
+
+## 📌 Comandos de referencia
+
+| Comando | ¿Para qué sirve? |
+|---------|------------------|
+| `git remote add origin URL` | Conecta el repositorio local a GitHub. |
+| `git push -u origin main` | Publica la rama main si ese es el nombre configurado. |
+| `git pull origin main` | Obtiene e integra cambios de main. |
+| `git status` | Revisa el estado antes de publicar. |
+
+
