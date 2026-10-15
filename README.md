@@ -241,3 +241,26 @@ Los alias permiten abreviar comandos frecuentes; son opcionales y conviene apren
 
 
 
+# ⚙️ Personalización de Git
+
+| Sección | Explicación | Ejemplo / Comando |
+|---------|-------------|-------------------|
+| **1. Niveles de configuración** | Git puede tener configuraciones del sistema, del usuario y del repositorio. La configuración local de un repositorio prevalece sobre valores globales, lo que permite ajustar proyectos específicos. | — |
+| **2. Consultar y cambiar opciones** | `git config` consulta y modifica preferencias como nombre, correo, editor, colores y comportamientos predeterminados. Comprueba el alcance de una opción antes de cambiarla. | `git config --global core.editor "code --wait"` |
+| **3. Atributos de Git** | El archivo `.gitattributes` permite definir cómo se tratan ciertos archivos, por ejemplo reglas de fin de línea o filtros. Es útil para mantener un comportamiento consistente entre diferentes sistemas. | `git check-attr --all -- archivo.txt` |
+| **4. Hooks** | Los hooks son scripts que se ejecutan en momentos específicos del flujo de Git, como antes de un commit. Pueden automatizar verificaciones, pero requieren cuidado en su configuración y mantenimiento. | — |
+| **5. Recomendaciones** | - Documenta las convenciones del equipo. <br> - Evita configuraciones innecesariamente complejas. <br> - Prueba los cambios antes de aplicarlos a un proyecto importante. | — |
+
+---
+
+## 📌 Comandos de referencia
+
+| Comando | ¿Para qué sirve? |
+|---------|------------------|
+| `git config --global --list` | Muestra la configuración global. |
+| `git config --local --list` | Muestra la configuración del repositorio actual. |
+| `git config --global core.editor "code --wait"` | Ejemplo de configuración de editor; adapta el comando al editor instalado. |
+| `git check-attr --all -- archivo.txt` | Consulta atributos aplicables a un archivo. |
+
+
+
